@@ -29,7 +29,7 @@
                        (iterator elem (1+ depth))))
                    ;; We're at an input-output pair
                    (format stream
-                           "| `~A` | `~A` |~%"
+                           "| ``` ~A ``` | ~A |~%"
                            (first list)
                            (second list)))))
       (iterator thorn::*characters* 1))))
