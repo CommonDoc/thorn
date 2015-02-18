@@ -19,11 +19,16 @@ Simply put, it defines a macro that maps a string to a Unicode character.
 To insert a character by name, use the `l` macro (For 'letter'). The content of
 that macro should be a single text node.
 
-For example, in VerTeX:
+For example, in VerTeX, the following:
 
 ```tex
-\l{alpha} => α
+The fine-structure constant, \l{alpha}, is approximately 7.29e\sup{-3}.
 ```
+
+Produces this:
+
+
+>The fine-structure constant, α, is approximately 7.29e<sup>-3</sup>.
 
 # List of Characters
 
