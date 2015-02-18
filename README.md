@@ -1,4 +1,6 @@
-# thorn
+# Thorn
+
+[![Build Status](https://travis-ci.org/CommonDoc/thorn.svg?branch=master)](https://travis-ci.org/CommonDoc/thorn)
 
 A CommonDoc extension for entering special characters.
 
