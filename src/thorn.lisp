@@ -1,13 +1,17 @@
 (in-package :cl-user)
 (defpackage thorn
-  (:use :cl))
+  (:use :cl)
+  (:export :*character-table*)
+  (:documentation "The main package of Thorn."))
 (in-package :thorn)
 
 (defparameter *characters*
-  `(("Diacritical Marks"
-     ("Grave Accent"
-      ()))
-    ("Languages"
+  `("Characters"
+    ("Diacritical Marks"
+     ("Acute Accent"
+      ("`a" "á")
+      ("`A" "Á")))
+    ("Scripts"
      ("Greek"
       ("alpha" "α")
       ("Alpha" "Α")
@@ -57,8 +61,28 @@
       ("psi" "ψ")
       ("Psi" "Ψ")
       ("omega" "ω")
-      ("Omega" "Ω")))
+      ("Omega" "Ω"))
+     ("Cyrillic"
+      ("" "")
+      ("" "")))
     ("Punctuation"
      ("ndash" "–")
      ("mdash" "—")
      ("sdash" "⁓"))))
+
+(defun build-character-table ()
+  "Recur through *characters*, building a hash table of characters."
+  (let ((table (make-hash-table :test #'equal)))
+    (labels ((iterator (list)
+               (if (listp (second list))
+                   ;; We're at a section, go through all the other elements
+                   (loop for elem in (rest list) do
+                     (iterator elem))
+                   ;; We're at an input-output pair
+                   (setf (gethash (first list) table)
+                         (second list)))))
+      (iterator *characters*))
+    table))
+
+(defvar *character-table* (build-character-table)
+  "A hash table that maps the name of a character to its resulting string.")
