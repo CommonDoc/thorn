@@ -16,8 +16,8 @@ Simply put, it defines a macro that maps a string to a Unicode character.
 
 # Usage
 
-Thorn defines a single macro, `l` (For 'letter'). The content of that macro
-should be a single text node.
+To insert a character by name, use the `l` macro (For 'letter'). The content of
+that macro should be a single text node.
 
 For example, in VerTeX:
 
@@ -32,8 +32,12 @@ For example, in VerTeX:
 The following were consulted in the elaboration of this list:
 
 * [Special Characters][latex-special] chapter in the LaTeX wikibook.
+* The [list of XML/HTML entities][entities].
+* The [Comprehensive LaTeX Symbol List][symbols].
 
 [latex-special]: https://en.wikibooks.org/wiki/LaTeX/Special_Characters
+[entities]: https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references
+[symbols]: http://ctan.mirror.rafal.ca/info/symbols/comprehensive/symbols-a4.pdf
 
 # License
 
