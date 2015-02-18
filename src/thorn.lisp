@@ -6,7 +6,7 @@
 (in-package :thorn)
 
 (defparameter *characters*
-  `("Characters"
+  `("List of Characters"
     ("Diacritical Marks"
      ("Acute Accent"
       ("`a" "á")
@@ -61,10 +61,7 @@
       ("psi" "ψ")
       ("Psi" "Ψ")
       ("omega" "ω")
-      ("Omega" "Ω"))
-     ("Cyrillic"
-      ("" "")
-      ("" "")))
+      ("Omega" "Ω")))
     ("Punctuation"
      ("ndash" "–")
      ("mdash" "—")
