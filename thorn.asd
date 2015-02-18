@@ -14,4 +14,5 @@
   :description "A CommonDoc extension for entering special characters."
   :long-description
   #.(uiop:read-file-string
-     (uiop:subpathname *load-pathname* "README.md")))
+     (uiop:subpathname *load-pathname* "README.md"))
+  :in-order-to ((test-op (test-op thorn-test))))

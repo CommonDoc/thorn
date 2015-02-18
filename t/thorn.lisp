@@ -7,10 +7,9 @@
   :description "thorn tests.")
 (in-suite tests)
 
-(test simple-test
+(test character-table-works
   (is
-   (equal 1 1))
-  (is-true
-   (and t t)))
+   (equal (gethash "alpha" thorn:*character-table*)
+          "α")))
 
 (run! 'tests)
