@@ -1,7 +1,16 @@
 (in-package :cl-user)
 (defpackage thorn
   (:use :cl)
-  (:export :*character-table*)
+  (:import-from :common-doc
+                :define-node
+                :text-node
+                :children
+                :text)
+  (:import-from :common-doc.macro
+                :macro-node
+                :expand-macro)
+  (:export :*character-table*
+           :letter)
   (:documentation "The main package of Thorn."))
 (in-package :thorn)
 
@@ -126,3 +135,17 @@
 
 (defvar *character-table* (build-character-table)
   "A hash table that maps the name of a character to its resulting string.")
+
+;;; Macro
+
+(define-node letter (macro-node)
+  ()
+  (:tag-name "l")
+  (:documentation "Letter macro."))
+
+(defmethod expand-macro ((node letter))
+  "Expand the letter macro."
+  (let ((text-node (first (children node))))
+    (let ((text (text text-node)))
+      (make-instance 'text-node
+                     :text (gethash text *character-table*)))))
