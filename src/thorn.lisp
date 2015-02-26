@@ -117,7 +117,10 @@
     ("Punctuation"
      ("ndash" "–")
      ("mdash" "—")
-     ("sdash" "⁓"))))
+     ("sdash" "⁓"))
+    ("Other"
+     ("ae" "æ")
+     ("AE" "Æ"))))
 
 (defun build-character-table ()
   "Recur through *characters*, building a hash table of characters."
