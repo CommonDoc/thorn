@@ -15,6 +15,10 @@
   :description "thorn tests.")
 (in-suite tests)
 
+(test build-table-works
+  (is
+   (typep (thorn::build-character-table) 'hash-table)))
+
 (test character-table-works
   (is
    (equal (gethash "alpha" *character-table*)
