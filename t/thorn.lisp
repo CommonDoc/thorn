@@ -35,4 +35,8 @@
      (equal (text expanded)
             "α"))))
 
+(test docgen-works
+  (finishes
+    (thorn.doc:build-markdown-table)))
+
 (run! 'tests)
