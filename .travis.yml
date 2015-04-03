@@ -19,7 +19,8 @@ script:
                  (lambda (c h)
                    (declare (ignore c h))
                    (uiop:quit -1)))'
-       -e '(coveralls:with-coveralls (:exclude "t"))'
+       -e '(coveralls:with-coveralls (:exclude "t")
+             t)'
 
 notifications:
   email:
