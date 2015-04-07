@@ -21,7 +21,7 @@ script:
                    (declare (ignore c h))
                    (uiop:quit -1)))'
        -e '(coveralls:with-coveralls (:exclude "t")
-             t)'
+             (ql:quickload :thorn-test))'
 
 notifications:
   email:
