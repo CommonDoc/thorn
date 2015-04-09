@@ -3,9 +3,9 @@
   :maintainer "Fernando Borretti <eudoxiahp@gmail.com>"
   :license "MIT"
   :version "0.1"
-  :homepage ""
-  :bug-tracker ""
-  :source-control (:git "")
+  :homepage "https://github.com/CommonDoc/thorn"
+  :bug-tracker "https://github.com/CommonDoc/thorn/issues"
+  :source-control (:git "git@github.com:CommonDoc/thorn.git")
   :depends-on (:common-doc)
   :components ((:module "src"
                 :serial t
