@@ -133,7 +133,9 @@
      ("tilde" "~"))
     ("Other"
      ("ae" "æ")
-     ("AE" "Æ"))))
+     ("AE" "Æ")
+     ("th" "þ")
+     ("eth" "ð"))))
 
 (defun build-character-table ()
   "Recur through *characters*, building a hash table of characters."
